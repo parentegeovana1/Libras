@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor de Libras</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+    <div class="container">
+        <div class="left-panel">
+            <h1>Traduza sua fala ou seu texto para Libras de forma fácil!</h1>
+            <p>Digite seu texto ou clique no microfone abaixo.</p>
+            <input type="text" class="input-box" placeholder="Digite seu texto">
+            <button class="button gravar">
+                <img src = "icons/microfone.png">
+                Gravar
+
+            </button>
+            <button class="button desligar">
+                <img src = "icons/botao-para-desligar-o-microfone (2).png">
+                Parar
+            </button>
+            
+            <button class="button converter">
+                
+                <img src = "icons/ideia-criativa.png">
+                Converter</button>
+        </div>
+        <div class="right-panel">
+            <h2>VLibras</h2>
+            <img src="tradutor.png">
+            
+        </div>
+    </div>
+
+</body>
+</html>
