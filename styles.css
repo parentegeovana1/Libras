@@ -34,15 +34,20 @@ h1 {
 	max-width: 45%;
 }
 
-.row {
+.col {
 	width: 100%;
-	flex-flow: row;
-	gap: 0.4rem;
+	display: flex;
+	flex-flow: column;
+	gap: 0.8rem;
 	margin-top: 1rem;
 }
 
 button {
 	width: 100%;
+}
+
+.btn.stop {
+	display: none;
 }
 
 code.result {

@@ -33,6 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let isRecording = false;
 
+	function toggleButtons() {
+		if (!isRecording) {
+			recordButton.style.display = "block";
+			stopButton.style.display = "none";
+		} else {
+			recordButton.style.display = "none";
+			stopButton.style.display = "block";
+		}
+	}
+
 	// Inicia gravação
 	recordButton.addEventListener("click", () => {
 		if (!isRecording) {
@@ -41,6 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			recordButton.disabled = true;
 			stopButton.disabled = false;
 			resultParagraph.textContent = "Gravando...";
+
+			toggleButtons();
 		}
 	});
 
@@ -51,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			isRecording = false;
 			recordButton.disabled = false;
 			stopButton.disabled = true;
+
+			toggleButtons();
 		}
 	});
 
@@ -60,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		for (let i = event.resultIndex; i < event.results.length; i++) {
 			transcript += event.results[i][0].transcript;
 		}
+
 		resultParagraph.textContent = transcript;
 	};
 
